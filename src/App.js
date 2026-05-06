@@ -302,8 +302,9 @@ export default function PaniniApp() {
   }, [capturedImg]);
 
   useEffect(()=>{
-    if(scanStep==="preview" && capturedImg && scanResults.length===0 && !scanning) runOCR();
-  }, [scanStep, capturedImg]);
+  if(scanStep==="preview" && capturedImg && scanResults.length===0 && !scanning) runOCR();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [scanStep, capturedImg]);
 
   const confirmScan = () => {
     let added=0, dupes=0;
