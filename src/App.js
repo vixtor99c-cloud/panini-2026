@@ -143,7 +143,7 @@ function preprocessCanvas(src, invert = false) {
 // ── Recorta la zona del badge (esquina sup-der de cada carta) ─────────────────
 // En la imagen de ejemplo, el badge "SCO 16" ocupa ~20% ancho x 10% alto desde arriba.
 // Cortamos múltiples franjas verticales para cubrir cartas solapadas.
-function cropBadgeZones(src) {
+/*function cropBadgeZones(src) {
   const zones = [];
   const W = src.width, H = src.height;
 
@@ -177,7 +177,7 @@ function cropBadgeZones(src) {
   }
 
   return zones;
-}
+}*/
 
 // ── Distancia de Levenshtein simplificada (para fuzzy matching de siglas) ─────
 function levenshtein(a, b) {
